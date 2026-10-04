@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>What Should I Do Now?</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        NowDo
+    </div>
+
+    <nav>
+        <a href="#generator">Generator</a>
+        <a href="#mission">Mission</a>
+        <a href="#history">History</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="tag">
+            SMART ACTIVITY GENERATOR
+        </span>
+
+        <h1>
+            Don't Know What To Do?
+            <span>Let NowDo Decide.</span>
+        </h1>
+
+        <p>
+            Tell us your time, energy and goal.
+            We'll give you one useful mission to do right now.
+        </p>
+
+        <a href="#generator" class="hero-btn">
+            Find My Mission
+        </a>
+
+    </div>
+
+</section>
+
+
+<section
+    class="generator-section"
+    id="generator"
+>
+
+    <div class="section-title">
+
+        <h2>
+            What Can You Do Now?
+        </h2>
+
+        <p>
+            Choose your current situation and generate a mission.
+        </p>
+
+    </div>
+
+
+    <div class="generator-card">
+
+        <div class="option-group">
+
+            <label>
+                Available Time
+            </label>
+
+            <div class="option-grid">
+
+                <button
+                    class="option-btn time-option active"
+                    data-value="10"
+                >
+                    <strong>10</strong>
+                    <span>Minutes</span>
+                </button>
+
+                <button
+                    class="option-btn time-option"
+                    data-value="20"
+                >
+                    <strong>20</strong>
+                    <span>Minutes</span>
+                </button>
+
+                <button
+                    class="option-btn time-option"
+                    data-value="30"
+                >
+                    <strong>30</strong>
+                    <span>Minutes</span>
+                </button>
+
+                <button
+                    class="option-btn time-option"
+                    data-value="60"
+                >
+                    <strong>60+</strong>
+                    <span>Minutes</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="option-group">
+
+            <label>
+                Energy Level
+            </label>
+
+            <div class="option-grid">
+
+                <button
+                    class="option-btn energy-option active"
+                    data-value="Low"
+                >
+                    <strong>Low</strong>
+                    <span>Need something easy</span>
+                </button>
+
+                <button
+                    class="option-btn energy-option"
+                    data-value="Medium"
+                >
+                    <strong>Medium</strong>
+                    <span>Can focus a little</span>
+                </button>
+
+                <button
+                    class="option-btn energy-option"
+                    data-value="High"
+                >
+                    <strong>High</strong>
+                    <span>Ready for action</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="option-group">
+
+            <label>
+                Your Goal
+            </label>
+
+            <div class="option-grid goal-grid">
+
+                <button
+                    class="option-btn goal-option active"
+                    data-value="Career"
+                >
+                    <strong>Career</strong>
+                    <span>Build your future</span>
+                </button>
+
+                <button
+                    class="option-btn goal-option"
+                    data-value="Study"
+                >
+                    <strong>Study</strong>
+                    <span>Learn something</span>
+                </button>
+
+                <button
+                    class="option-btn goal-option"
+                    data-value="Health"
+                >
+                    <strong>Health</strong>
+                    <span>Move your body</span>
+                </button>
+
+                <button
+                    class="option-btn goal-option"
+                    data-value="Relax"
+                >
+                    <strong>Relax</strong>
+                    <span>Recharge yourself</span>
+                </button>
+
+                <button
+                    class="option-btn goal-option"
+                    data-value="Creative"
+                >
+                    <strong>Creative</strong>
+                    <span>Make something</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="option-group">
+
+            <label>
+                Where Are You?
+            </label>
+
+            <div class="option-grid location-grid">
+
+                <button
+                    class="option-btn location-option active"
+                    data-value="Home"
+                >
+                    <strong>Home</strong>
+                    <span>At home</span>
+                </button>
+
+                <button
+                    class="option-btn location-option"
+                    data-value="College"
+                >
+                    <strong>College</strong>
+                    <span>On campus</span>
+                </button>
+
+                <button
+                    class="option-btn location-option"
+                    data-value="Anywhere"
+                >
+                    <strong>Anywhere</strong>
+                    <span>Any location</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="generateBtn"
+            class="generate-btn"
+        >
+            Generate My Mission
+        </button>
+
+    </div>
+
+</section>
+
+
+<section
+    class="mission-section"
+    id="mission"
+>
+
+    <div class="section-title">
+
+        <h2>
+            Your Next Mission
+        </h2>
+
+        <p>
+            One small action can make your day better.
+        </p>
+
+    </div>
+
+
+    <div
+        id="missionCard"
+        class="mission-card hidden"
+    >
+
+        <div class="mission-top">
+
+            <span id="missionCategory">
+                CAREER
+            </span>
+
+            <span id="missionTime">
+                20 MIN
+            </span>
+
+        </div>
+
+
+        <div class="mission-icon">
+            →
+        </div>
+
+
+        <h2 id="missionTitle">
+            Your mission
+        </h2>
+
+
+        <p
+            id="missionDescription"
+            class="mission-description"
+        >
+            Mission description
+        </p>
+
+
+        <div class="mission-details">
+
+            <div>
+
+                <span>
+                    TIME
+                </span>
+
+                <strong id="detailTime">
+                    20 min
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    ENERGY
+                </span>
+
+                <strong id="detailEnergy">
+                    Medium
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    GOAL
+                </span>
+
+                <strong id="detailGoal">
+                    Career
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <strong>
+                Why this mission?
+            </strong>
+
+            <p id="missionReason">
+                Because it matches your current situation.
+            </p>
+
+        </div>
+
+
+        <div class="mission-actions">
+
+            <button
+                id="completeBtn"
+                class="complete-btn"
+            >
+                Mark as Completed
+            </button>
+
+            <button
+                id="favoriteBtn"
+                class="favorite-btn"
+            >
+                Add to Favorites
+            </button>
+
+            <button
+                id="anotherBtn"
+                class="another-btn"
+            >
+                Give Me Another
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="emptyMission"
+        class="empty-mission"
+    >
+
+        <div class="question-icon">
+            ?
+        </div>
+
+        <h3>
+            Your next mission is waiting
+        </h3>
+
+        <p>
+            Select your preferences and click
+            "Generate My Mission".
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="stats-section">
+
+    <div class="mini-stats">
+
+        <div class="mini-stat">
+
+            <strong id="totalMissions">
+                0
+            </strong>
+
+            <span>
+                Missions Generated
+            </span>
+
+        </div>
+
+
+        <div class="mini-stat">
+
+            <strong id="completedMissions">
+                0
+            </strong>
+
+            <span>
+                Completed
+            </span>
+
+        </div>
+
+
+        <div class="mini-stat">
+
+            <strong id="favoriteMissions">
+                0
+            </strong>
+
+            <span>
+                Favorites
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section
+    class="history-section"
+    id="history"
+>
+
+    <div class="section-title">
+
+        <h2>
+            Mission History
+        </h2>
+
+        <p>
+            See what you've been working on.
+        </p>
+
+    </div>
+
+
+    <div class="history-card">
+
+        <div class="history-header">
+
+            <h3>
+                Recent Missions
+            </h3>
+
+            <button
+                id="clearHistoryBtn"
+                class="clear-btn"
+            >
+                Clear History
+            </button>
+
+        </div>
+
+
+        <div id="historyContainer">
+
+            <div class="history-empty">
+                No missions completed yet.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 NowDo | What Should I Do Now?
+    </p>
+
+    <p class="footer-note">
+        One small mission at a time.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
